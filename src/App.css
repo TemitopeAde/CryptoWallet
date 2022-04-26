@@ -1,0 +1,262 @@
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+.top,
+a.left {
+  justify-content: center;
+}
+
+.top {
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 auto 15px;
+  padding: 23px;
+  width: 100%;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.left {
+  /* color: #5878bc; */
+  font-size: 16px;
+  font-weight: 550;
+  padding-top: 10px;
+  text-decoration: none;
+}
+/* 
+.top, a.left {
+  justify-content: center;
+} */
+
+.top img {
+  width: 115px;
+}
+
+.apps {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 2px #ccc;
+  font-size: 60%;
+  font-weight: 700;
+  height: auto;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  text-align: center;
+  width: 95px;
+}
+
+.btn-large {
+  border-radius: 7px;
+  /* background-color: #3182ce; */
+  color: #fff;
+  background-color: #1a1c34;
+  box-shadow: 0px 0px 2px black;
+  border-left: 4px solid #3182ce;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border: none;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 1rem 2rem;
+  letter-spacing: 0.5px;
+  margin-top: 1.5rem;
+  animation: myAnim 2s ease 0s infinite normal forwards;
+}
+
+.grid-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.grid-container::after {
+  position: absolute;
+  content: "";
+  /* background-color: #071326; */
+  height: 100%;
+  top: 0px;
+  left: 0;
+  width: 10px;
+  bottom: 10px;
+  border-top-left-radius: 30px;
+}
+
+.grid-container img {
+  width: 65px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  width: .7em;
+  border-radius: 30px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(7, 0, 29, 0.3);
+  border-radius: 30px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 198, 201);
+  outline: 1px solid rgb(0, 3, 23);
+  opacity: .7;
+  border-radius: 30px;
+}
+
+.counter {
+  background: url("Image/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* body {
+  background: url("Image/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} */
+
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-container {
+  background-color: #2f335b;
+}
+
+.grid-container a {
+  text-decoration: none;
+}
+
+.grid-container img {
+  height: 60px;
+}
+
+.grid-container a:hover {
+  color: #fff;
+}
+
+.toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+}
+
+
+.toggle button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  row-gap: 2rem;
+  column-gap: 1.5rem;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: .9rem;
+  }
+}
+
+.apps-grid {
+  cursor: pointer;
+}
+
+.apps {
+  transition: .7s;
+}
+
+.apps:hover {
+  transform: scale(1.1);
+}
+
+.apps img {
+  width: 70%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+
+.apps-grid .apps {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
