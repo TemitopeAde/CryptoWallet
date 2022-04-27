@@ -11,7 +11,7 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const PhraseForm = () => {
-  const [toggleState, setToggleState] = useState(2);
+  const [toggleState, setToggleState] = useState(1);
 
   const dot = '...'
 
