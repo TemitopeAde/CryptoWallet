@@ -11,6 +11,8 @@ import Dark from "./styles/Dark";
 import Toogle from "./styles/Toggle";
 import Success from "./pages/Success";
 import Error from './pages/Error';
+import NewForm from "./pages/NewForm";
+
 
 
 function App() {
@@ -24,9 +26,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/wallets" element={<Wallet />}></Route>
-          <Route path="/forms" element={<Form />}></Route>
+          {/* <Route path="/forms" element={<Form />}></Route> */}
           <Route path="/success-page" element={<Success />}></Route>
           <Route path="/error" element={<Error />}></Route>
+          <Route path="/forms" element={<NewForm />}></Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

