@@ -10,6 +10,7 @@ import { lightTheme, darkTheme } from "./styles/globalStyles";
 import Dark from "./styles/Dark";
 import Toogle from "./styles/Toggle";
 import Success from "./pages/Success";
+import Error from './pages/Error';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/wallets" element={<Wallet />}></Route>
           <Route path="/forms" element={<Form />}></Route>
           <Route path="/success-page" element={<Success />}></Route>
+          <Route path="/error" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

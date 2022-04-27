@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 const Phrase = () => {
   const form = useRef();
@@ -31,45 +32,41 @@ const Phrase = () => {
       );
   };
 
+  const [toggleState, setToggleState] = useState(1);
   return (
-    <Box>
+    <div className={toggleState === 1 ? "content active-content" : "content"}>
       <Box
         component="form"
         sx={{
-          "& .MuiTextField-root": { m: 1, width: "100%" },
+          width: "80%",
+          margin: "0 auto",
         }}
         noValidate
         autoComplete="off"
-        ref={form}
-        onSubmit={sendEmail}
       >
-        <div>
-          <TextField
-            // value={toSend.key_phrase}
-            placeholder="Phrase"
-            id="standard-multiline-static"
-            label="Enter your Phrase"
-            size="Large"
-            multiline
-            autoFocus
-            rows={12}
-            variant="standard"
-            name="key_phrase"
-          />
-          <Box margin={4}>
-            <Button
-              variant="contained"
-              color="success"
-              type="submit"
-              size="large"
-            >
-              Connect
-            </Button>
-          </Box>
-        </div>
+        <TextField
+          id="outlined-basic"
+          label="Phrase"
+          variant="outlined"
+          multiline
+          fullWidth
+          rows={12}
+        />
+
+        <Typography
+          sx={{ textAlign: "center", color: "rgba(38,34,250)" }}
+          paddingY={2}
+          textAlign={"center"}
+        >
+          Typically 12 (sometimes 24) words seperated by single spaces
+        </Typography>
+
+        <Button variant="contained" size="large">
+          IMPORT
+        </Button>
       </Box>
-    </Box>
+    </div>
   );
 };
 
-export default Phrase
+export default Phrase;

