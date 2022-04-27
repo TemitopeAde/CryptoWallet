@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Success = () => {

@@ -2,7 +2,6 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Container from "@mui/material/Container";
-import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 import { ThemeProvider } from "styled-components";
 import Dark from "../styles/Dark";
 import { lightTheme, darkTheme } from "../styles/globalStyles";

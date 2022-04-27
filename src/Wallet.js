@@ -1,10 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import { WalletInfo } from "./data";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./styles/globalStyles";
-import Dark from "./styles/Dark";
-import Toggle from "./styles/Toggle";
 import { useNavigate } from "react-router-dom";
 
 const Wallet = () => {

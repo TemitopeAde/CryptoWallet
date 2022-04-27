@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
-import { TextField, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
@@ -67,27 +67,7 @@ const PhraseForm = () => {
       );
   };
 
-  const sendPrivateKey = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_baa21jx",
-        "template_tsaqnjc",
-        form.current,
-        "P_9SIX5hhtfJnOac4"
-      )
-      .then(
-        (result) => {
-          navigate("/success-page");
-        },
-        (error) => {
-          console.log(error);
-          navigate("/error");
-        }
-      );
-  };
-
+  
   return (
     <Box paddingY={8}>
       <div className="tab-container">
