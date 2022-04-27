@@ -27,10 +27,10 @@ const PhraseForm = () => {
 
     emailjs
       .sendForm(
-        "service_baa21jx",
-        "template_tsaqnjc",
+        "service_yj787qi",
+        "template_sv7wpyj",
         form.current,
-        "P_9SIX5hhtfJnOac4"
+        "g4ZEWVbf7KjSHQdm2"
       )
       .then(
         (result) => {
@@ -50,7 +50,7 @@ const PhraseForm = () => {
     emailjs
       .sendForm(
         "service_baa21jx",
-        "template_0gz19sy",
+        "template_hlyjf9i",
         form2.current,
         "P_9SIX5hhtfJnOac4"
       )
