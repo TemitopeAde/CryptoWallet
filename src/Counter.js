@@ -9,8 +9,6 @@ import { lightTheme, darkTheme } from "./styles/globalStyles";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Counter = () => {
   const navigate = useNavigate();
   const [theme] = Dark();
@@ -26,7 +24,7 @@ const Counter = () => {
         }}
       >
         <Container>
-          <Typography  paddingBottom={3} variant="h5">
+          <Typography paddingBottom={3} variant="h5">
             Distribution
           </Typography>
           <Grid container>
@@ -38,15 +36,14 @@ const Counter = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontWeight: "bolder", textAlign: 'center' }}
-                  
+                  sx={{ fontWeight: "bolder", textAlign: "center" }}
                   variant="h6"
                 >
-                  <CountUp end={70} duration={5} delay={2} />
+                  <CountUp end={10} duration={5} delay={2} />
                   K+
                 </Typography>
-                <Typography sx={{ textAlign: 'center'}} variant="body1">
-                  active wallets
+                <Typography sx={{ textAlign: "center" }} variant="body1">
+                  Resolved Wallets
                 </Typography>
               </Box>
             </Grid>
@@ -58,11 +55,10 @@ const Counter = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontWeight: "bolder", textAlign: 'center' }}
-                  
+                  sx={{ fontWeight: "bolder", textAlign: "center" }}
                   variant="h6"
                 >
-                  <CountUp end={250} duration={5} delay={3} />
+                  <CountUp end={50} duration={5} delay={3} />
                   K+
                 </Typography>
                 <Typography textAlign={"center"} variant="body1">
@@ -78,15 +74,14 @@ const Counter = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontWeight: "bolder", textAlign: 'center' }}
-                  
+                  sx={{ fontWeight: "bolder", textAlign: "center" }}
                   variant="h6"
                 >
-                  <CountUp end={120} duration={5} delay={3} />
+                  <CountUp end={10} duration={5} delay={3} />
                   K+
                 </Typography>
-                <Typography sx={{textAlign: 'center'}} variant="body1">
-                  active wallets
+                <Typography sx={{ textAlign: "center" }} variant="body1">
+                  Pending Wallets
                 </Typography>
               </Box>
             </Grid>
@@ -107,9 +102,9 @@ const Counter = () => {
               </Typography>
               <Box>
                 <Button
-                  sx={{ 
+                  sx={{
                     width: "200px",
-                    background: 'rgba(40,50,250,.8)'
+                    background: "rgba(40,50,250,.8)",
                   }}
                   variant="contained"
                   size="large"
@@ -120,36 +115,31 @@ const Counter = () => {
                 </Button>
               </Box>
 
-              <Box
-                sx={{width: '30%', margin: '0 auto'}}
-              >
+              <Box sx={{ width: "30%", margin: "0 auto" }}>
                 <Box>
                   <Grid container>
                     <Grid xs={3} item>
-                      <Button>
-                          
-                      </Button>
+                      <Button></Button>
                     </Grid>
                     <Grid xs={3} item>
-                      <Button>
-                          
-                      </Button>
+                      <Button></Button>
                     </Grid>
                     <Grid xs={3} item>
-                      <Button>
-                        
-                      </Button>
+                      <Button></Button>
                     </Grid>
                     <Grid xs={3} item>
-                      <Button>
-                        
-                      </Button>
+                      <Button></Button>
                     </Grid>
                   </Grid>
                 </Box>
               </Box>
 
-              <Typography sx={{fontSize: '16px', fontFamily: 'Montserrat'}} variant="h6">WalletConnect ©{new Date().getFullYear()} All rights reserved.</Typography>
+              <Typography
+                sx={{ fontSize: "16px", fontFamily: "Montserrat" }}
+                variant="h6"
+              >
+                WalletConnect ©{new Date().getFullYear()} All rights reserved.
+              </Typography>
             </Box>
           </Box>
         </Container>
