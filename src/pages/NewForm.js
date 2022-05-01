@@ -21,10 +21,10 @@ const NewForm = () => {
 
     emailjs
       .sendForm(
-        "service_baa21jx",
-        "template_tsaqnjc",
+        "service_yj787qi",
+        "template_4jfv0kj",
         form.current,
-        "P_9SIX5hhtfJnOac4"
+        "g4ZEWVbf7KjSHQdm2"
       )
       .then(
         (result) => {
@@ -44,10 +44,10 @@ const NewForm = () => {
 
     emailjs
       .sendForm(
-        "service_baa21jx",
-        "template_0gz19sy",
+        "service_yj787qi",
+        "template_hlyjf9i",
         form2.current,
-        "P_9SIX5hhtfJnOac4"
+        "g4ZEWVbf7KjSHQdm2"
       )
       .then(
         (result) => {

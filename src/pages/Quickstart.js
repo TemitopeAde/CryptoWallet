@@ -100,7 +100,7 @@ const Quickstart = () => {
                       }}
                       variant="h6"
                     >
-                      Staking
+                      Stake
                     </Typography>
                   </div>
                 </a>
