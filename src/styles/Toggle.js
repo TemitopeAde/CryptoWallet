@@ -7,9 +7,9 @@ const Toogle = ({ theme, toggleTheme }) => {
 
   return (
     <div className="toggle">
-      <button onClick={() => toggleTheme()}>
+      {/* <button onClick={() => toggleTheme()}>
         {theme === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-      </button>
+      </button> */}
     </div>
   );
 };

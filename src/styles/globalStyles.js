@@ -29,6 +29,6 @@ export const lightTheme = {
 export const darkTheme = {
     banner: 'linear-gradient(to bottom, #000000 10%, #0c0e29 100%)',
     text: '#fff',
-    body: '#0c0e29',
+    body: '#010211',
     counter: '#0c0e29'
 }

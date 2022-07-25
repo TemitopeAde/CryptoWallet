@@ -3,11 +3,12 @@ import React from "react";
 import { WalletInfo } from "./data";
 import { useNavigate } from "react-router-dom";
 
+
 const Wallet = () => {
   const navigate = useNavigate();
   const {info} = WalletInfo 
   return (
-    <Box>
+    <Box style={{background: 'ghostwhite'}} className="wallet-address-container">
       <Box>
         <Box
           sx={{
@@ -31,7 +32,7 @@ const Wallet = () => {
                   <div className="apps" onClick={() => navigate("/forms")}>
                     <img src={item.img} alt={item.name} />
                     <Typography
-                      sx={{ fontSize: "0.8rem", fontWeight: "bold", fontFamily: 'Montserrat' }}
+                      sx={{ fontSize: "0.73rem", fontWeight: "bold", fontFamily: 'Montserrat' }}
                       variant="h6"
 
                     >
